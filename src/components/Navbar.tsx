@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
-      <div className="relative pointer-events-auto flex items-center">
+      <div className="relative pointer-events-auto flex items-center w-full sm:w-auto">
         <div
           aria-hidden="true"
           className="absolute -left-5 top-0 w-5 h-5 overflow-hidden pointer-events-none hidden sm:block"
@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
           <div className="w-full h-full rounded-tr-2xl shadow-[8px_-8px_0_0_#000000]" />
         </div>
 
-        <nav className="w-[720px] flex items-center justify-between gap-6 sm:gap-10 px-8 py-2.5 bg-[#000000] rounded-b-2xl shadow-2xl shadow-black/80">
+        <nav className="w-full sm:w-[720px] sm:max-w-[calc(100vw-3rem)] flex items-center justify-between gap-6 sm:gap-10 px-5 sm:px-8 py-2.5 bg-[#000000] rounded-b-2xl shadow-2xl shadow-black/80">
           <div className="flex items-center gap-3">
             <video
               src={Logo}
@@ -112,6 +112,7 @@ export const Navbar: React.FC = () => {
                 onClick={closeMenu}
                 className="text-center w-full py-2 mt-1 text-xs font-semibold text-black bg-white rounded-xl"
               >
+                CONTÁCTAME
               </a>
             </motion.div>
           )}
