@@ -13,20 +13,6 @@ const METRICS: MetricItem[] = [
   { value: "Modern Stack", label: "React • Tailwind • TypeScript" },
 ];
 
-/*
-  Distribución por tamaño de pantalla:
-  - Móvil (< 768px): texto, avatar y métricas, uno debajo de otro.
-  - Tablet y portátil pequeño (768–1279px): avatar arriba y debajo dos columnas
-    (presentación a la izquierda, métricas a la derecha).
-  - Escritorio (≥ 1280px): tres columnas con el avatar en el centro, dentro del
-    mismo contenedor de 1280px (max-w-7xl) que el resto de secciones.
-    En pantallas muy grandes (> 1920px) o muy altas, la cabecera deja de crecer:
-    el título se limita a 24rem y la altura de la sección a 56rem.
-
-  El título PORTFOLIO se coloca respecto a la parte de arriba del avatar,
-  no respecto a la sección. Así la cabeza tapa siempre la misma proporción
-  de las letras (la parte de abajo), sea cual sea el tamaño de pantalla.
-*/
 export const Cabecera = () => {
   return (
     <section className="relative w-full min-h-screen xl:min-h-[min(100vh,56rem)] bg-[#1C1C1C] text-white pt-24 flex flex-col justify-between overflow-hidden px-6 sm:px-10 lg:px-16">
@@ -44,7 +30,6 @@ export const Cabecera = () => {
 
       <div className="relative w-full xl:max-w-7xl xl:mx-auto flex-1 flex items-end">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-end gap-x-8 gap-y-8 md:gap-y-10">
-          {/* Presentación */}
           <div className="relative z-20 order-1 md:order-2 xl:order-1 flex flex-col items-start text-left space-y-3 pb-0 md:pb-12 xl:pb-10">
             <span className="text-red-400 font-serif italic text-2xl sm:text-3xl tracking-normal">
               Hola, soy
@@ -64,7 +49,6 @@ export const Cabecera = () => {
             </div>
           </div>
 
-          {/* Avatar con el título PORTFOLIO detrás */}
           <div className="relative z-10 order-2 md:order-1 md:col-span-2 xl:col-span-1 xl:order-2 flex justify-center items-end pt-[8vw] md:pt-[10vw] xl:pt-[min(5vw,6rem)] pointer-events-none">
             <div className="relative w-[min(100%,24rem)] md:w-[min(62vw,30rem)] xl:w-[36vw] 2xl:w-[35rem]">
               <h1
@@ -82,7 +66,6 @@ export const Cabecera = () => {
             </div>
           </div>
 
-          {/* Métricas */}
           <div className="relative z-20 order-3 flex flex-col md:items-end justify-end space-y-8 md:text-right pb-8 md:pb-12 xl:pb-10">
             <div className="flex items-start md:justify-end gap-2 text-xs sm:text-sm text-neutral-300 max-w-[200px]">
               <HiSparkles className="text-red-500 w-4 h-4 flex-shrink-0 mt-0.5" />

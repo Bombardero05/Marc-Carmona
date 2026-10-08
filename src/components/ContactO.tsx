@@ -73,10 +73,8 @@ export const Contacto: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Contenido en dos columnas */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-                    {/* Lado izquierdo: Información, Canales directos y Redes */}
                     <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-neutral-900/40 border border-white/10 p-8 rounded-3xl backdrop-blur-sm shadow-2xl">
                         <div>
                             <span className="text-red-400 font-serif italic text-2xl tracking-normal">¿Tienes una idea?</span>
@@ -145,7 +143,6 @@ export const Contacto: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Enlaces Sociales & Plataformas */}
                         <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
                             <a
                                 href="https://github.com"
