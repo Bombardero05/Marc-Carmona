@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiMenuAlt3, HiX, HiPhone } from "react-icons/hi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Logo from "../assets/LOGO.mp4";
 
 interface NavItem {
@@ -15,7 +15,6 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 const WHATSAPP_HREF = "https://wa.me/34655663482";
-const PHONE_HREF = "tel:+34655663482";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,17 +61,7 @@ export const Navbar: React.FC = () => {
             ))}
           </ul>
 
-          <div className="hidden md:flex items-center gap-2">
-            <motion.a
-              href={PHONE_HREF}
-              aria-label="Llamar por teléfono"
-              title="Llamar por teléfono"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-2 text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 rounded-xl transition-colors duration-150"
-            >
-              <HiPhone size={14} />
-            </motion.a>
+          <div className="hidden md:flex items-center">
             <motion.a
               href={WHATSAPP_HREF}
               target="_blank"
@@ -125,7 +114,7 @@ export const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="text-center w-full py-2 text-xs font-semibold text-black bg-white rounded-xl"
+                className="text-center w-full py-2 mt-1 text-xs font-semibold text-black bg-white rounded-xl"
               >
                 CONTÁCTAME
               </a>
