@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { HiMenuAlt3, HiX, HiPhone } from "react-icons/hi";
 import Logo from "../assets/LOGO.mp4";
 
 interface NavItem {
@@ -14,6 +14,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Contacto", href: "#contacto" },
 ];
 
+const WHATSAPP_HREF = "https://wa.me/34655663482";
 const PHONE_HREF = "tel:+34655663482";
 
 export const Navbar: React.FC = () => {
@@ -61,9 +62,21 @@ export const Navbar: React.FC = () => {
             ))}
           </ul>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-2">
             <motion.a
               href={PHONE_HREF}
+              aria-label="Llamar por teléfono"
+              title="Llamar por teléfono"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 rounded-xl transition-colors duration-150"
+            >
+              <HiPhone size={14} />
+            </motion.a>
+            <motion.a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="px-4 py-1.5 text-xs font-semibold text-black bg-white hover:bg-neutral-200 rounded-xl transition-colors duration-150 shadow-sm whitespace-nowrap"
@@ -110,7 +123,17 @@ export const Navbar: React.FC = () => {
               <a
                 href={PHONE_HREF}
                 onClick={closeMenu}
-                className="text-center w-full py-2 mt-1 text-xs font-semibold text-black bg-white rounded-xl"
+                className="flex items-center justify-center gap-2 w-full py-2 mt-1 text-xs font-semibold text-white bg-white/10 hover:bg-white/15 rounded-xl transition-colors"
+              >
+                <HiPhone size={14} />
+                LLAMAR
+              </a>
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="text-center w-full py-2 text-xs font-semibold text-black bg-white rounded-xl"
               >
                 CONTÁCTAME
               </a>
