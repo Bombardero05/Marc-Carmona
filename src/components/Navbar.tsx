@@ -121,14 +121,6 @@ export const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href={PHONE_HREF}
-                onClick={closeMenu}
-                className="flex items-center justify-center gap-2 w-full py-2 mt-1 text-xs font-semibold text-white bg-white/10 hover:bg-white/15 rounded-xl transition-colors"
-              >
-                <HiPhone size={14} />
-                LLAMAR
-              </a>
-              <a
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
