@@ -59,7 +59,6 @@ export const Contacto: React.FC = () => {
         >
             <div className="w-full max-w-[94vw] xl:max-w-7xl mx-auto z-10">
 
-                {/* Cabecera */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between pb-4 mb-10 border-b border-white/10 gap-4">
                     <div>
                         <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-red-500 font-bold mb-1">
@@ -86,7 +85,6 @@ export const Contacto: React.FC = () => {
                             </p>
 
                             <div className="space-y-4 pt-2">
-                                {/* Email Directo */}
                                 <div className="flex items-center gap-3 text-neutral-300 text-sm">
                                     <div className="p-2.5 rounded-xl bg-black border border-white/10 text-red-500 shrink-0">
                                         <HiOutlineEnvelope className="w-5 h-5" />
@@ -99,7 +97,6 @@ export const Contacto: React.FC = () => {
                                     </div>
                                 </div>
 
-                                {/* WhatsApp */}
                                 <div className="flex items-center gap-3 text-neutral-300 text-sm">
                                     <div className="p-2.5 rounded-xl bg-black border border-white/10 text-red-500 shrink-0">
                                         <FaWhatsapp className="w-5 h-5" />
@@ -117,7 +114,6 @@ export const Contacto: React.FC = () => {
                                     </div>
                                 </div>
 
-                                {/* Teléfono directo */}
                                 <div className="flex items-center gap-3 text-neutral-300 text-sm">
                                     <div className="p-2.5 rounded-xl bg-black border border-white/10 text-red-500 shrink-0">
                                         <HiOutlinePhone className="w-5 h-5" />
@@ -130,7 +126,6 @@ export const Contacto: React.FC = () => {
                                     </div>
                                 </div>
 
-                                {/* Ubicación */}
                                 <div className="flex items-center gap-3 text-neutral-300 text-sm">
                                     <div className="p-2.5 rounded-xl bg-black border border-white/10 text-red-500 shrink-0">
                                         <HiOutlineMapPin className="w-5 h-5" />
@@ -178,7 +173,6 @@ export const Contacto: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Lado derecho: Formulario */}
                     <div className="lg:col-span-7 bg-neutral-900/40 border border-white/10 p-8 rounded-3xl backdrop-blur-sm shadow-2xl">
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
